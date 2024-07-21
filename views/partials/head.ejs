@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><%= title %> | Video tracker</title>
+<meta name="og:title" content="Video tracker">
+<meta name="description" content="My video making progress website">
+<meta name="og:description" content="My video making progress website">
+<meta name="keywords" content="website, SSP6904, ShaunHoffer, profile">
+<meta name="author" content="Shaun Hoffer">
+<link rel="icon" type="image/x-icon" href="/videoicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://files.shaunhoffer.cc/styles/fontawesome/css/all.min.css" />
+<script src="https://files.shaunhoffer.cc/js/jquery-3.7.1.min.js"></script>
+<link href="https://files.shaunhoffer.cc/styles/halfmoon/halfmoon.min.css" rel="stylesheet">
+<script src="/config.js"></script>
+<style>
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bs-primary) var(--bs-light);
+}
+  
+[data-bs-theme=dark] {
+    scrollbar-color: var(--bs-primary) var(--bs-dark);
+}
+</style>
+</head>
+<body class="d-flex flex-column" style="min-height: 100vh">
+<%- include('navbar'); %>
+<div id="rootsite" class="container-fluid flex-fill mb-2">
