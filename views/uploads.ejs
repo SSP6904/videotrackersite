@@ -1,5 +1,19 @@
 <%- include('partials/head'); %>
 <h1>Uploads</h1>
 
+<div id="results" class="row row-cols-1 row-cols-md-3 g-4">
+</div>
 
+<script>
+$(document).ready(function() {
+  $.get(
+    "/uploads/list",
+      function(data) {
+        $.each( data.items, function( i, item ) {
+          $('#results').append('<div class="col"><div class="card"><img src="https://i.ytimg.com/vi/' + item.id.videoId + '/hqdefault.jpg" class="card-img-top"><div class="card-body"><p>Name: ' + item.snippet.title + '</p><p>Date: ' + item.snippet.publishedAt + '</p><p>ID: ' + item.id.videoId + '</p><p>Link: <a href="https://www.youtube.com/watch?v=' + item.id.videoId + '">https://www.youtube.com/watch?v=' + item.id.videoId + '</a></p></div></div></div>');
+        })
+      }
+  );
+});
+</script>
 <%- include('partials/footer'); %>
